@@ -1,9 +1,0 @@
-/wc a
-/spawnpoint
-/gamerule spawnRadius 0
-/kill
-/setworldspawn
-/kill
-/give @p minecraft:command_block
-/summon minecraft:painting
-/summon pig

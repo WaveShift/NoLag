@@ -27,3 +27,7 @@ replay_pid*
 # Project exclude paths
 /build/
 /run/
+
+# IDE
+/.idea/
+*.iml

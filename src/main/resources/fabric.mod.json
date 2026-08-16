@@ -3,12 +3,15 @@
   "id": "nodeathanimationsplus",
   "version": "${version}",
   "name": "No Death Animations+",
-  "description": "",
-  "authors": [],
+  "description": "Hides selected vanilla visuals: death animations, poof particles, zombified piglins, and nether portal blocks/particles. Client-side only.",
+  "authors": [
+    "meowjade",
+    "1.21.4 port: WaveShift"
+  ],
   "contact": {
-    "repo": ""
+    "repo": "https://github.com/WaveShift/NoDeathAnimationPlus"
   },
-  "license": "All-Rights-Reserved",
+  "license": "GPL-3.0-only",
   "environment": "*",
   "entrypoints": {
     "client": [
