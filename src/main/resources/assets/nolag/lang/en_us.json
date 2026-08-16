@@ -1,0 +1,8 @@
+{
+  "text.autoconfig.nolag.option.poofParticles" : "Poof Particles",
+  "text.autoconfig.nolag.option.deathAnimation" : "Death Animation",
+  "text.autoconfig.nolag.option.deathFlipDegrees" : "Death Animation angle (degrees)",
+  "text.autoconfig.nolag.option.renderZombifiedPiglins" : "Render Zombified Piglins",
+  "text.autoconfig.nolag.option.renderNetherPortalBlocks" : "Render Nether Portal Blocks",
+  "text.autoconfig.nolag.option.netherPortalParticles" : "Nether Portal Particles"
+}

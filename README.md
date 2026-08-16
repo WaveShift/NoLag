@@ -1,4 +1,4 @@
-# No Death Animations+ (1.21.4 port)
+# NoLag
 
 A client-side Fabric mod that hides selected vanilla visuals. This is a port of
 [meowjade/NoDeathAnimationPlus](https://github.com/meowjade/NoDeathAnimationPlus) from 1.20.4 to
@@ -11,7 +11,7 @@ with. See [Licence](#licence).
 ## Options
 
 Every option defaults to `true` (or `0` for the angle), meaning **installing the mod changes nothing
-until you turn something off**. Configure via Mod Menu, or edit `config/nodeathanimationsplus.toml`.
+until you turn something off**. Configure via Mod Menu, or edit `config/nolag.toml`.
 
 | Option | Default | Turning it off |
 | --- | --- | --- |
@@ -66,12 +66,17 @@ Output lands in `build/libs/`.
 **New options**
 
 - `renderZombifiedPiglins`, folded into the existing `shouldRender` hook rather than adding a mixin.
-- `renderNetherPortalBlocks`, hooked at `BlockRenderDispatcher.renderBatched`. Chosen over the more
-  usual `getRenderShape → INVISIBLE` because `BlockRenderDispatcher` is client-only by construction,
-  so cancelling it cannot reach collision or teleport logic; `getRenderShape` lives on
-  `BlockBehaviour`, which is shared with the server.
+- `renderNetherPortalBlocks`, hooked at `BlockBehaviour.BlockStateBase.getRenderShape` and reported
+  as `INVISIBLE`. An earlier attempt hooked `BlockRenderDispatcher.renderBatched` instead; it bound
+  correctly but had no visible effect, because that method is only reached through vanilla's chunk
+  mesher and any replacement mesher (Sodium and its forks) never calls it. `getRenderShape` is the
+  one point every mesher must consult, since it is how vanilla marks air and barriers as not-drawn.
 - `netherPortalParticles`, hooked at `NetherPortalBlock.animateTick` — the client's random display
   tick, which only spawns particles and plays the ambient sound.
+
+**Config changes apply immediately.** Block visibility is baked into chunk geometry, so toggling
+the portal option only affected sections rebuilt afterwards. A save listener now calls
+`levelRenderer.allChanged()`, the same rebuild F3+A triggers, so the toggle takes effect at once.
 
 **Defaults changed.** Upstream suppressed poof particles and death animations out of the box. Here
 everything defaults to vanilla behaviour so the mod is opt-in.

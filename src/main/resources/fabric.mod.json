@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "nodeathanimationsplus",
+  "id": "nolag",
   "version": "${version}",
-  "name": "No Death Animations+",
+  "name": "NoLag",
   "description": "Hides selected vanilla visuals: death animations, poof particles, zombified piglins, and nether portal blocks/particles. Client-side only.",
   "authors": [
     "meowjade",
@@ -15,14 +15,14 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.jade.nodeathanimationsplus.ModClient"
+      "org.jade.nolag.ModClient"
     ],
     "modmenu": [
-      "org.jade.nodeathanimationsplus.ModMenuIntegration"
+      "org.jade.nolag.ModMenuIntegration"
     ]
   },
   "mixins": [
-    "nodeathanimsplus.mixins.json"
+    "nolag.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

@@ -1,9 +1,9 @@
-package org.jade.nodeathanimationsplus;
+package org.jade.nolag;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 
-@Config(name = "nodeathanimationsplus")
+@Config(name = "nolag")
 public class ModConfig implements ConfigData {
 	public boolean poofParticles = true;
 	public boolean deathAnimation = true;

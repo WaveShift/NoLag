@@ -1,13 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.jade.nodeathanimationsplus.mixin",
+  "package": "org.jade.nolag.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
     "EntityRenderDispatcherMixin",
     "LivingEntityMixin",
     "LivingEntityRendererMixin",
-    "BlockRenderDispatcherMixin",
+    "BlockStateBaseMixin",
     "NetherPortalBlockMixin"
   ],
   "injectors": {

@@ -1,4 +1,4 @@
-package org.jade.nodeathanimationsplus.mixin;
+package org.jade.nolag.mixin;
 
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import org.spongepowered.asm.mixin.Mixin;
@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static org.jade.nodeathanimationsplus.ModClient.config;
+import static org.jade.nolag.ModClient.config;
 
 /**
  * Ported from 1.20.4. Two things changed in 1.21.2's entity-render-state refactor:

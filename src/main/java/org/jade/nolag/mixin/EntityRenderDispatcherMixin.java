@@ -1,11 +1,11 @@
-package org.jade.nodeathanimationsplus.mixin;
+package org.jade.nolag.mixin;
 
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
-import org.jade.nodeathanimationsplus.ModClient;
+import org.jade.nolag.ModClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
